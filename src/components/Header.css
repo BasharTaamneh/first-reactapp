@@ -1,0 +1,11 @@
+.div1{
+    padding: 2.5ch;
+    position: sticky;
+    top: 0;
+    background-color: rgb(128, 189, 230);
+    text-align: center;
+    color: cornsilk;
+    font-family:cursive;
+    font-style: italic;
+    font-stretch: extra-expanded;
+}

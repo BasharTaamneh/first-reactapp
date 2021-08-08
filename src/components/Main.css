@@ -1,0 +1,21 @@
+.imgcontainer{
+background-color: rgba(128, 189, 230, 0.089) ;
+padding: 2.5ch;
+}
+
+.imgcontainer .img1{
+    display:inline-block;
+    margin-left: 6ch;
+text-align: center;
+}
+.imgcontainer .img2{
+    display:inline-block;
+    margin-left: 8ch;
+    text-align: center;
+}
+.imgcontainer .img3{
+    display:inline-block;
+    margin-left: 8ch;
+    text-align: center;
+
+}

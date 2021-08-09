@@ -1,21 +1,41 @@
-.imgcontainer{
-background-color: rgba(128, 189, 230, 0.089) ;
-padding: 2.5ch;
+.div2{
+    background-color: rgba(128, 189, 230, 0.205);
+}
+.div2 .container{
+    /* border: 4px solid red; */
+    width: 40ch;
+    height: 60ch;
+    padding: 1ch;
+    margin-top: 5ch;
+    margin-left: 9.5ch;
+    display: inline-block;
+
+}
+.div2 .container .card-img{
+    width: 35.1ch;
+    height: 30ch;
+}
+.card-body{
+    height: 25ch;
+}
+.card-title {
+    color: rgb(66, 116, 149);
+    font-weight: bolder;
+}
+.card-text{
+    margin-top: 1.5ch;
+    color: rgb(0,101,168);
+    text-align: center;
+    font-weight: bold;
+    font-family:sans-serif;
+
+}
+.card-body .btn {
+    position: relative;
 }
 
-.imgcontainer .img1{
-    display:inline-block;
+.btn {
+    position:absolute;
+    bottom: 0ch;
     margin-left: 6ch;
-text-align: center;
-}
-.imgcontainer .img2{
-    display:inline-block;
-    margin-left: 8ch;
-    text-align: center;
-}
-.imgcontainer .img3{
-    display:inline-block;
-    margin-left: 8ch;
-    text-align: center;
-
 }

@@ -39,3 +39,12 @@
     bottom: 0ch;
     margin-left: 6ch;
 }
+
+.modal-content{
+    position: relative;
+    top: 12ch;
+}
+.modal-body img{
+    width: 54ch;
+    height: 35ch;
+}

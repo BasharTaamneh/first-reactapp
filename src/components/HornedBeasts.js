@@ -3,30 +3,31 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal'
-import HornedData from './HornedData.json'
-
 class HornedBeasts extends react.Component {
     constructor(props) {
         super(props);
         this.state = {
-            NumOfVot: 0
+            NumOfVot: 0,
+            show: false
         }
     }
-
 
     IncrNumOfVot = () => {
         this.setState({
             NumOfVot: this.state.NumOfVot + 1
         })
     }
+    handleModal=()=>{
+        this.setState({
+            show:!this.state.show
+        })
+    }
     render() {
-        // console.log(HornedData.find(this.props.keyModal ))
-        // console.log(this.props.keyModal)
         return (
             <div className='container'>
 
-                <Card style={{ width: '19rem' }}>
-                    <Card.Img  onClick={this.props.Modalview}  src={this.props.src} />
+                <Card  style={{ width: '19rem' }}>
+                    <Card.Img  onClick={this.handleModal} src={this.props.src} />
                     <Card.Body>
                         <Card.Title>{this.props.imgTitle}</Card.Title>
                         <Card.Text>
@@ -35,18 +36,18 @@ class HornedBeasts extends react.Component {
                         <Button onClick={this.IncrNumOfVot} variant="primary">Number of votes: {this.state.NumOfVot}</Button>
                     </Card.Body>
                 </Card>
-
-                <Modal show={this.props.showstatuse} >
-                    <Modal.Header closeButton onHide={this.props.Modalview}>
-                        <Modal.Title>{this.props.imgTitle}</Modal.Title>
-                    </Modal.Header>
-                    <Modal.Body><img src={this.props.src}alt={this.props.imgTitle} /> <p>{this.props.description}</p></Modal.Body>
-                    <Modal.Footer>
-                        <Button variant="secondary" onClick={this.props.Modalview}>
-                            Close
-                        </Button>
-                    </Modal.Footer>
-                </Modal>
+                
+      <Modal show={this.state.show} >
+        <Modal.Header closeButton onHide={this.handleModal}>
+          <Modal.Title>{this.props.imgTitle}</Modal.Title>
+        </Modal.Header>
+        <Modal.Body><img src={this.props.src}/> <p>{this.props.description}</p></Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={this.handleModal}>
+            OK
+          </Button>
+        </Modal.Footer>
+      </Modal>
 
             </div>
         )

@@ -42,9 +42,24 @@
 
 .modal-content{
     position: relative;
-    top: 12ch;
+    top: 10ch;
 }
 .modal-body img{
     width: 54ch;
     height: 35ch;
+}
+.modal-footer{
+    height: 6ch;
+}
+.modal-footer .btn{
+    background-color:  rgb(13,110,253);
+}
+.modal-body p{   
+    color: rgb(0,101,168);
+    font-family:sans-serif;
+    font-weight: bolder;
+}
+.modal-title{
+    color: rgb(66, 116, 149);
+    font-weight: bolder;
 }

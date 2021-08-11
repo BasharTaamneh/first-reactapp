@@ -13,7 +13,7 @@ class App2 extends react.Component {
                         HornedData.map((items, idx) => {
                             return (
                                 <HornedBeasts
-                                    key={idx}
+                                    keymodal={idx}
                                     imgTitle={items.title}
                                     src={items.image_url}
                                     description={items.description}

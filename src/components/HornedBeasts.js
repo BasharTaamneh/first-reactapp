@@ -31,7 +31,7 @@ class HornedBeasts extends react.Component {
                     <Card.Body>
                         <Card.Title>{this.props.imgTitle}</Card.Title>
                         <Card.Text>
-                            {this.props.description}
+                        {this.props.description}
                         </Card.Text>
                         <Button onClick={this.IncrNumOfVot} variant="primary">Number of votes: {this.state.NumOfVot}</Button>
                     </Card.Body>
@@ -54,3 +54,4 @@ class HornedBeasts extends react.Component {
     }
 }
 export default HornedBeasts;
+// onClick={console.log(this.props.keymodal)}

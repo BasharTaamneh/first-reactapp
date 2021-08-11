@@ -7,10 +7,13 @@ class App2 extends react.Component {
 
     render() {
         return (
+            
             <>
                 {
-                    HornedData.map((items, idx) => {
+                HornedData.filter(element => element.horns===element.horns)
+                   .map((items, idx) => {
                         return (
+                            
                             <HornedBeasts
                                 keyModal={idx}
                                 imgTitle={items.title}

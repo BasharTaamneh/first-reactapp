@@ -12,7 +12,6 @@ class HornedBeasts extends react.Component {
         }
     }
 
-
     IncrNumOfVot = () => {
         this.setState({
             NumOfVot: this.state.NumOfVot + 1
@@ -24,7 +23,7 @@ class HornedBeasts extends react.Component {
             <div className='container'>
 
                 <Card style={{ width: '19rem' }}>
-                    <Card.Img onClick={()=>this.props.show(this.props.data)} src={this.props.src} />
+                    <Card.Img onClick={() => this.props.show(this.props.data)} src={this.props.src} />
                     <Card.Body>
                         <Card.Title>{this.props.imgTitle}</Card.Title>
                         <Card.Text>

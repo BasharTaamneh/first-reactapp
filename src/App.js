@@ -12,7 +12,7 @@ class App extends react.Component {
     this.state = {
       show: false,
       data: {},
-      
+      horNum: ''
     }
   }
 
@@ -32,8 +32,15 @@ class App extends react.Component {
       data: {}
     })
   }
-  
-  
+
+  dataForm = async (e) => {
+    e.preventDefault();
+
+    await this.setState({
+      horNum: Number(e.target.value)
+    })
+    console.log('state= ', this.state.horNum);
+  }
 
   render() {
     return (
@@ -43,10 +50,11 @@ class App extends react.Component {
         </div>
 
         <div className='div2'>
-        <Form/>
-          <Main show={this.handleModal} />
-          
-        <SelectedBeast onhide={this.onhide} show={this.state.show} data={this.state.data} />
+
+          <Form getchosen={this.dataForm} />
+          <Main gitselected={this.state.horNum} show={this.handleModal} />
+
+          <SelectedBeast onhide={this.onhide} show={this.state.show} data={this.state.data} />
         </div>
         <div className='div3'>
           <Footer />

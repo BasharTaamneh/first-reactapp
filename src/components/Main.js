@@ -7,23 +7,27 @@ class App2 extends react.Component {
 
     render() {
         return (
-            
+
             <>
                 {
-                HornedData.filter(element => element.horns===element.horns)
-                   .map((items, idx) => {
-                        return (
-                            
-                            <HornedBeasts
-                                keyModal={idx}
-                                imgTitle={items.title}
-                                src={items.image_url}
-                                description={items.description}
-                                data={items}
-                                show={this.props.show}
-                            />
-                        );
-                    })
+
+                    HornedData.map((items, idx) => {
+                        console.log(this.props.gitselected)
+                        if (items.horns === this.props.gitselected || this.props.gitselected == 0)
+                            return (
+
+                                <HornedBeasts
+                                    keyModal={idx}
+                                    imgTitle={items.title}
+                                    src={items.image_url}
+                                    description={items.description}
+                                    data={items}
+                                    show={this.props.show}
+                                />
+                            );
+                    }
+
+                    )
 
                 }
             </>

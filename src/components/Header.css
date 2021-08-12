@@ -8,4 +8,5 @@
     font-family:cursive;
     font-style: italic;
     font-stretch: extra-expanded;
+    z-index: 5000;
 }

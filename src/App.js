@@ -2,7 +2,37 @@ import react from 'react';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Main from './components/Main'
+import SelectedBeast from './components/SelectedBeast '
+
 class App extends react.Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      show: false,
+      data: {}
+    }
+  }
+
+  
+  handleModal = (props) => {
+    this.setState({
+      show: true,
+      data: props
+
+    })
+  }
+
+
+  onhide = () => {
+    this.setState({
+      show: false,
+      data: {}
+    })
+  }
+  
+  
+
   render() {
     return (
       <div itemID='body'>
@@ -11,13 +41,15 @@ class App extends react.Component {
         </div>
 
         <div className='div2'>
-          <Main />
+          <Main show={this.handleModal} />
+        
+        <SelectedBeast onhide={this.onhide} show={this.state.show} data={this.state.data} />
         </div>
-
         <div className='div3'>
           <Footer />
         </div>
       </div>
+
     )
 
   }
